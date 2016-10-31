@@ -10,7 +10,7 @@ Container for converting eBooks with the help of [Calibre](https://calibre-ebook
     docker run --rm -it bwstitt/ebook-convert
     ```
 
-2. Convert a .epub to a .mobi:
+2. Convert a .epub to a .mobi and save it to the same directory:
 
     ```bash
     export EBOOK_DIR=/path/to/some/directory/with/ebooks
