@@ -13,10 +13,10 @@ Container for converting eBooks with the help of [Calibre](https://calibre-ebook
 2. Convert a .epub to a .mobi and save it to the same directory:
 
     ```bash
-    export EBOOK_DIR=/path/to/some/directory/with/ebooks
-    export BOOK_NAME=name of your book
+    cd /path/to/some/directory/with/ebooks/in/the/wrong/format
 
-    docker run --rm -it -v "$EBOOK_DIR:/target" bwstitt/ebook-convert "$BOOK_NAME.epub" "$BOOK_NAME.mobi"
+    export BOOK_NAME=name of your book
+    docker run --rm -it -v "$(pwd):/target" bwstitt/ebook-convert "$BOOK_NAME.epub" "$BOOK_NAME.mobi"
     ```
 
 You don't have to export variables, but I find it easier to read.
