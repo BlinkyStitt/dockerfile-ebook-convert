@@ -16,7 +16,7 @@ Container for converting eBooks with the help of [Calibre](https://calibre-ebook
     cd /path/to/some/directory/with/ebooks/in/the/wrong/format
 
     export BOOK_NAME=name of your book
-    docker run --rm -it -v "$(pwd):/target" bwstitt/ebook-convert "$BOOK_NAME.epub" "$BOOK_NAME.mobi"
+    docker run --rm -it -v "$(pwd):/target" -u `id -u $USER` bwstitt/ebook-convert "$BOOK_NAME.epub" "$BOOK_NAME.mobi"
     ```
 
 You don't have to export variables, but I find it easier to read.
